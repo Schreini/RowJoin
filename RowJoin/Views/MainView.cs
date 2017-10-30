@@ -44,7 +44,7 @@ namespace RowJoin.Views
         {
             var templates = new List<JoinTemplate>();
             templates.Add(new JoinTemplate(0, "select * from $TABLE where ", "$COLUMN like '%", " or ", "%'", ""));
-            templates.Add(new JoinTemplate(1, "(", "'", "', '", "'", ")"));
+            templates.Add(new JoinTemplate(1, "(", "'", ", ", "'", ")"));
             var cbx = (ComboBoxEdit) sender;
             var template = templates.ElementAt(cbx.SelectedIndex);
             AutoJoin = false;
