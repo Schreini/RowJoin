@@ -30,6 +30,7 @@ namespace RowJoin.Views
                 CbxTemplate.Properties.Items.Add(template.Name);
                 template.Index = i++;
             }
+            CbxTemplate.SelectedIndex = 0;
         }
 
         private void Join()

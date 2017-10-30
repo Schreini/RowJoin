@@ -102,6 +102,8 @@
             // 
             this.CbxTemplate.Location = new System.Drawing.Point(83, 12);
             this.CbxTemplate.Name = "CbxTemplate";
+            this.CbxTemplate.Properties.Appearance.Font = new System.Drawing.Font("Courier New", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CbxTemplate.Properties.Appearance.Options.UseFont = true;
             this.CbxTemplate.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.CbxTemplate.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
