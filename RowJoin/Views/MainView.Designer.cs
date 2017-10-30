@@ -28,26 +28,27 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DevExpress.XtraLayout.ColumnDefinition columnDefinition3 = new DevExpress.XtraLayout.ColumnDefinition();
-            DevExpress.XtraLayout.ColumnDefinition columnDefinition4 = new DevExpress.XtraLayout.ColumnDefinition();
-            DevExpress.XtraLayout.RowDefinition rowDefinition7 = new DevExpress.XtraLayout.RowDefinition();
-            DevExpress.XtraLayout.RowDefinition rowDefinition8 = new DevExpress.XtraLayout.RowDefinition();
-            DevExpress.XtraLayout.RowDefinition rowDefinition9 = new DevExpress.XtraLayout.RowDefinition();
-            DevExpress.XtraLayout.RowDefinition rowDefinition10 = new DevExpress.XtraLayout.RowDefinition();
-            DevExpress.XtraLayout.RowDefinition rowDefinition11 = new DevExpress.XtraLayout.RowDefinition();
-            DevExpress.XtraLayout.RowDefinition rowDefinition12 = new DevExpress.XtraLayout.RowDefinition();
+            DevExpress.XtraLayout.ColumnDefinition columnDefinition1 = new DevExpress.XtraLayout.ColumnDefinition();
+            DevExpress.XtraLayout.ColumnDefinition columnDefinition2 = new DevExpress.XtraLayout.ColumnDefinition();
+            DevExpress.XtraLayout.RowDefinition rowDefinition1 = new DevExpress.XtraLayout.RowDefinition();
+            DevExpress.XtraLayout.RowDefinition rowDefinition2 = new DevExpress.XtraLayout.RowDefinition();
+            DevExpress.XtraLayout.RowDefinition rowDefinition3 = new DevExpress.XtraLayout.RowDefinition();
+            DevExpress.XtraLayout.RowDefinition rowDefinition4 = new DevExpress.XtraLayout.RowDefinition();
+            DevExpress.XtraLayout.RowDefinition rowDefinition5 = new DevExpress.XtraLayout.RowDefinition();
+            DevExpress.XtraLayout.RowDefinition rowDefinition6 = new DevExpress.XtraLayout.RowDefinition();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainView));
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
-            this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
+            this.TxtOutput = new DevExpress.XtraEditors.MemoEdit();
+            this.TxtInput = new DevExpress.XtraEditors.MemoEdit();
+            this.TxtFooter = new DevExpress.XtraEditors.TextEdit();
+            this.TxtAfter = new DevExpress.XtraEditors.TextEdit();
+            this.TxtBetween = new DevExpress.XtraEditors.TextEdit();
+            this.TxtBefore = new DevExpress.XtraEditors.TextEdit();
             this.TxtHeader = new DevExpress.XtraEditors.TextEdit();
+            this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.Header = new DevExpress.XtraLayout.LayoutControlItem();
             this.emptySpaceItem1 = new DevExpress.XtraLayout.EmptySpaceItem();
-            this.TxtBefore = new DevExpress.XtraEditors.TextEdit();
             this.BeforEach = new DevExpress.XtraLayout.LayoutControlItem();
-            this.TxtBetween = new DevExpress.XtraEditors.TextEdit();
-            this.TxtAfter = new DevExpress.XtraEditors.TextEdit();
-            this.TxtFooter = new DevExpress.XtraEditors.TextEdit();
-            this.TxtInput = new DevExpress.XtraEditors.MemoEdit();
-            this.TxtOutput = new DevExpress.XtraEditors.MemoEdit();
             this.Input = new DevExpress.XtraLayout.LayoutControlItem();
             this.Output = new DevExpress.XtraLayout.LayoutControlItem();
             this.Footer = new DevExpress.XtraLayout.LayoutControlItem();
@@ -55,17 +56,17 @@
             this.AfterEach = new DevExpress.XtraLayout.LayoutControlItem();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TxtOutput.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TxtInput.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TxtFooter.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TxtAfter.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TxtBetween.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TxtBefore.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.TxtHeader.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Header)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.TxtBefore.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BeforEach)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.TxtBetween.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.TxtAfter.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.TxtFooter.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.TxtInput.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.TxtOutput.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Input)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Output)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Footer)).BeginInit();
@@ -91,6 +92,74 @@
             this.layoutControl1.TabIndex = 0;
             this.layoutControl1.Text = "layoutControl1";
             // 
+            // TxtOutput
+            // 
+            this.TxtOutput.Location = new System.Drawing.Point(520, 132);
+            this.TxtOutput.Name = "TxtOutput";
+            this.TxtOutput.Properties.ReadOnly = true;
+            this.TxtOutput.Size = new System.Drawing.Size(362, 345);
+            this.TxtOutput.StyleController = this.layoutControl1;
+            this.TxtOutput.TabIndex = 10;
+            // 
+            // TxtInput
+            // 
+            this.TxtInput.Location = new System.Drawing.Point(83, 132);
+            this.TxtInput.Name = "TxtInput";
+            this.TxtInput.Size = new System.Drawing.Size(362, 345);
+            this.TxtInput.StyleController = this.layoutControl1;
+            this.TxtInput.TabIndex = 9;
+            this.TxtInput.TextChanged += new System.EventHandler(this.TxtHeader_TextChanged);
+            // 
+            // TxtFooter
+            // 
+            this.TxtFooter.EditValue = ")";
+            this.TxtFooter.Location = new System.Drawing.Point(83, 108);
+            this.TxtFooter.Name = "TxtFooter";
+            this.TxtFooter.Size = new System.Drawing.Size(799, 20);
+            this.TxtFooter.StyleController = this.layoutControl1;
+            this.TxtFooter.TabIndex = 8;
+            this.TxtFooter.TextChanged += new System.EventHandler(this.TxtHeader_TextChanged);
+            // 
+            // TxtAfter
+            // 
+            this.TxtAfter.EditValue = "\'";
+            this.TxtAfter.Location = new System.Drawing.Point(83, 84);
+            this.TxtAfter.Name = "TxtAfter";
+            this.TxtAfter.Size = new System.Drawing.Size(799, 20);
+            this.TxtAfter.StyleController = this.layoutControl1;
+            this.TxtAfter.TabIndex = 7;
+            this.TxtAfter.TextChanged += new System.EventHandler(this.TxtHeader_TextChanged);
+            // 
+            // TxtBetween
+            // 
+            this.TxtBetween.EditValue = ", ";
+            this.TxtBetween.Location = new System.Drawing.Point(83, 60);
+            this.TxtBetween.Name = "TxtBetween";
+            this.TxtBetween.Size = new System.Drawing.Size(799, 20);
+            this.TxtBetween.StyleController = this.layoutControl1;
+            this.TxtBetween.TabIndex = 6;
+            this.TxtBetween.TextChanged += new System.EventHandler(this.TxtHeader_TextChanged);
+            // 
+            // TxtBefore
+            // 
+            this.TxtBefore.EditValue = "\'";
+            this.TxtBefore.Location = new System.Drawing.Point(83, 36);
+            this.TxtBefore.Name = "TxtBefore";
+            this.TxtBefore.Size = new System.Drawing.Size(799, 20);
+            this.TxtBefore.StyleController = this.layoutControl1;
+            this.TxtBefore.TabIndex = 5;
+            this.TxtBefore.TextChanged += new System.EventHandler(this.TxtHeader_TextChanged);
+            // 
+            // TxtHeader
+            // 
+            this.TxtHeader.EditValue = "(";
+            this.TxtHeader.Location = new System.Drawing.Point(83, 12);
+            this.TxtHeader.Name = "TxtHeader";
+            this.TxtHeader.Size = new System.Drawing.Size(799, 20);
+            this.TxtHeader.StyleController = this.layoutControl1;
+            this.TxtHeader.TabIndex = 4;
+            this.TxtHeader.TextChanged += new System.EventHandler(this.TxtHeader_TextChanged);
+            // 
             // layoutControlGroup1
             // 
             this.layoutControlGroup1.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.True;
@@ -107,44 +176,34 @@
             this.layoutControlGroup1.LayoutMode = DevExpress.XtraLayout.Utils.LayoutMode.Table;
             this.layoutControlGroup1.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup1.Name = "Root";
-            columnDefinition3.SizeType = System.Windows.Forms.SizeType.Percent;
-            columnDefinition3.Width = 50D;
-            columnDefinition4.SizeType = System.Windows.Forms.SizeType.Percent;
-            columnDefinition4.Width = 50D;
+            columnDefinition1.SizeType = System.Windows.Forms.SizeType.Percent;
+            columnDefinition1.Width = 50D;
+            columnDefinition2.SizeType = System.Windows.Forms.SizeType.Percent;
+            columnDefinition2.Width = 50D;
             this.layoutControlGroup1.OptionsTableLayoutGroup.ColumnDefinitions.AddRange(new DevExpress.XtraLayout.ColumnDefinition[] {
-            columnDefinition3,
-            columnDefinition4});
-            rowDefinition7.Height = 24D;
-            rowDefinition7.SizeType = System.Windows.Forms.SizeType.AutoSize;
-            rowDefinition8.Height = 24D;
-            rowDefinition8.SizeType = System.Windows.Forms.SizeType.AutoSize;
-            rowDefinition9.Height = 24D;
-            rowDefinition9.SizeType = System.Windows.Forms.SizeType.AutoSize;
-            rowDefinition10.Height = 24D;
-            rowDefinition10.SizeType = System.Windows.Forms.SizeType.AutoSize;
-            rowDefinition11.Height = 24D;
-            rowDefinition11.SizeType = System.Windows.Forms.SizeType.AutoSize;
-            rowDefinition12.Height = 100D;
-            rowDefinition12.SizeType = System.Windows.Forms.SizeType.Percent;
+            columnDefinition1,
+            columnDefinition2});
+            rowDefinition1.Height = 24D;
+            rowDefinition1.SizeType = System.Windows.Forms.SizeType.AutoSize;
+            rowDefinition2.Height = 24D;
+            rowDefinition2.SizeType = System.Windows.Forms.SizeType.AutoSize;
+            rowDefinition3.Height = 24D;
+            rowDefinition3.SizeType = System.Windows.Forms.SizeType.AutoSize;
+            rowDefinition4.Height = 24D;
+            rowDefinition4.SizeType = System.Windows.Forms.SizeType.AutoSize;
+            rowDefinition5.Height = 24D;
+            rowDefinition5.SizeType = System.Windows.Forms.SizeType.AutoSize;
+            rowDefinition6.Height = 100D;
+            rowDefinition6.SizeType = System.Windows.Forms.SizeType.Percent;
             this.layoutControlGroup1.OptionsTableLayoutGroup.RowDefinitions.AddRange(new DevExpress.XtraLayout.RowDefinition[] {
-            rowDefinition7,
-            rowDefinition8,
-            rowDefinition9,
-            rowDefinition10,
-            rowDefinition11,
-            rowDefinition12});
+            rowDefinition1,
+            rowDefinition2,
+            rowDefinition3,
+            rowDefinition4,
+            rowDefinition5,
+            rowDefinition6});
             this.layoutControlGroup1.Size = new System.Drawing.Size(894, 489);
             this.layoutControlGroup1.TextVisible = false;
-            // 
-            // TxtHeader
-            // 
-            this.TxtHeader.EditValue = "(";
-            this.TxtHeader.Location = new System.Drawing.Point(84, 12);
-            this.TxtHeader.Name = "TxtHeader";
-            this.TxtHeader.Size = new System.Drawing.Size(798, 20);
-            this.TxtHeader.StyleController = this.layoutControl1;
-            this.TxtHeader.TabIndex = 4;
-            this.TxtHeader.TextChanged += new System.EventHandler(this.TxtHeader_TextChanged);
             // 
             // Header
             // 
@@ -164,16 +223,6 @@
             this.emptySpaceItem1.Size = new System.Drawing.Size(437, 24);
             this.emptySpaceItem1.TextSize = new System.Drawing.Size(0, 0);
             // 
-            // TxtBefore
-            // 
-            this.TxtBefore.EditValue = "\'";
-            this.TxtBefore.Location = new System.Drawing.Point(84, 36);
-            this.TxtBefore.Name = "TxtBefore";
-            this.TxtBefore.Size = new System.Drawing.Size(798, 20);
-            this.TxtBefore.StyleController = this.layoutControl1;
-            this.TxtBefore.TabIndex = 5;
-            this.TxtBefore.TextChanged += new System.EventHandler(this.TxtHeader_TextChanged);
-            // 
             // BeforEach
             // 
             this.BeforEach.Control = this.TxtBefore;
@@ -184,54 +233,6 @@
             this.BeforEach.Size = new System.Drawing.Size(874, 24);
             this.BeforEach.Text = "Befor each";
             this.BeforEach.TextSize = new System.Drawing.Size(68, 13);
-            // 
-            // TxtBetween
-            // 
-            this.TxtBetween.EditValue = ", ";
-            this.TxtBetween.Location = new System.Drawing.Point(84, 60);
-            this.TxtBetween.Name = "TxtBetween";
-            this.TxtBetween.Size = new System.Drawing.Size(798, 20);
-            this.TxtBetween.StyleController = this.layoutControl1;
-            this.TxtBetween.TabIndex = 6;
-            this.TxtBetween.TextChanged += new System.EventHandler(this.TxtHeader_TextChanged);
-            // 
-            // TxtAfter
-            // 
-            this.TxtAfter.EditValue = "\'";
-            this.TxtAfter.Location = new System.Drawing.Point(84, 84);
-            this.TxtAfter.Name = "TxtAfter";
-            this.TxtAfter.Size = new System.Drawing.Size(798, 20);
-            this.TxtAfter.StyleController = this.layoutControl1;
-            this.TxtAfter.TabIndex = 7;
-            this.TxtAfter.TextChanged += new System.EventHandler(this.TxtHeader_TextChanged);
-            // 
-            // TxtFooter
-            // 
-            this.TxtFooter.EditValue = ")";
-            this.TxtFooter.Location = new System.Drawing.Point(84, 108);
-            this.TxtFooter.Name = "TxtFooter";
-            this.TxtFooter.Size = new System.Drawing.Size(798, 20);
-            this.TxtFooter.StyleController = this.layoutControl1;
-            this.TxtFooter.TabIndex = 8;
-            this.TxtFooter.TextChanged += new System.EventHandler(this.TxtHeader_TextChanged);
-            // 
-            // TxtInput
-            // 
-            this.TxtInput.Location = new System.Drawing.Point(84, 132);
-            this.TxtInput.Name = "TxtInput";
-            this.TxtInput.Size = new System.Drawing.Size(361, 345);
-            this.TxtInput.StyleController = this.layoutControl1;
-            this.TxtInput.TabIndex = 9;
-            this.TxtInput.TextChanged += new System.EventHandler(this.TxtHeader_TextChanged);
-            // 
-            // TxtOutput
-            // 
-            this.TxtOutput.Location = new System.Drawing.Point(521, 132);
-            this.TxtOutput.Name = "TxtOutput";
-            this.TxtOutput.Properties.ReadOnly = true;
-            this.TxtOutput.Size = new System.Drawing.Size(361, 345);
-            this.TxtOutput.StyleController = this.layoutControl1;
-            this.TxtOutput.TabIndex = 10;
             // 
             // Input
             // 
@@ -290,21 +291,22 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(894, 489);
             this.Controls.Add(this.layoutControl1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "MainView";
             this.Text = "RowJoin";
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TxtOutput.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TxtInput.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TxtFooter.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TxtAfter.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TxtBetween.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TxtBefore.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.TxtHeader.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Header)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.TxtBefore.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.BeforEach)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.TxtBetween.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.TxtAfter.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.TxtFooter.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.TxtInput.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.TxtOutput.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Input)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Output)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Footer)).EndInit();
