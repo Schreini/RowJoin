@@ -36,7 +36,8 @@ namespace RowJoin.Views
 
         private void TxtHeader_TextChanged(object sender, EventArgs e)
         {
-            TxtOutput.Text = Join();
+            if(AutoJoin)
+                TxtOutput.Text = Join();
         }
 
         private void comboBoxEdit1_SelectedIndexChanged(object sender, EventArgs e)
@@ -46,13 +47,17 @@ namespace RowJoin.Views
             templates.Add(new JoinTemplate(1, "(", "'", "', '", "'", ")"));
             var cbx = (ComboBoxEdit) sender;
             var template = templates.ElementAt(cbx.SelectedIndex);
+            AutoJoin = false;
             TxtHeader.Text = template.Header;
             TxtBefore.Text = template.BeforeEach;
             TxtBetween.Text = template.BetweenEach;
             TxtAfter.Text = template.AfterEach;
             TxtFooter.Text = template.Footer;
+            AutoJoin = true;
             Join();
         }
+
+        public bool AutoJoin { get; private set; }
     }
 
     public class JoinTemplate
