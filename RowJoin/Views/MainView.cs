@@ -31,6 +31,8 @@ namespace RowJoin.Views
             }
             result.Append(string.Join(TxtBetween.Text, lines));
             result.Append(TxtFooter.Text);
+            result.Replace("\\r", "\r");
+            result.Replace("\\n", "\n");
             return result.ToString();
         }
 
