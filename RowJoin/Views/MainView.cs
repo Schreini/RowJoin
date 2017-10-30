@@ -1,12 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.IO;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
 
@@ -14,13 +9,30 @@ namespace RowJoin.Views
 {
     public partial class MainView : Form
     {
+        private List<JoinTemplate> _templates;
+
         public MainView()
         {
             InitializeComponent();
-            CbxTemplate.SelectedIndex = 1;
+            InitializeTemplates();
         }
 
-        private string Join()
+        private void InitializeTemplates()
+        {
+            _templates = new List<JoinTemplate>();
+            _templates.Add(new JoinTemplate("('...', ...)", "(", "'", ", ", "'", ")"));
+            _templates.Add(new JoinTemplate("Select ... like ... or ...", "select * from $TABLE where ", "$COLUMN like '%", " or ", "%'", ""));
+            _templates.Add(new JoinTemplate("<empty>", "", "", "", "", ""));
+
+            int i = 0;
+            foreach (var template in _templates)
+            {
+                CbxTemplate.Properties.Items.Add(template.Name);
+                template.Index = i++;
+            }
+        }
+
+        private void Join()
         {
             StringBuilder result = new StringBuilder();
             result.Append(TxtHeader.Text);
@@ -33,22 +45,20 @@ namespace RowJoin.Views
             result.Append(TxtFooter.Text);
             result.Replace("\\r", "\r");
             result.Replace("\\n", "\n");
-            return result.ToString();
+            result.Replace("\\t", "\t");
+            TxtOutput.Text = result.ToString();
         }
 
         private void TxtHeader_TextChanged(object sender, EventArgs e)
         {
             if(AutoJoin)
-                TxtOutput.Text = Join();
+                Join();
         }
 
         private void comboBoxEdit1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            var templates = new List<JoinTemplate>();
-            templates.Add(new JoinTemplate(0, "select * from $TABLE where ", "$COLUMN like '%", " or ", "%'", ""));
-            templates.Add(new JoinTemplate(1, "(", "'", ", ", "'", ")"));
             var cbx = (ComboBoxEdit) sender;
-            var template = templates.ElementAt(cbx.SelectedIndex);
+            var template = _templates.ElementAt(cbx.SelectedIndex);
             AutoJoin = false;
             TxtHeader.Text = template.Header;
             TxtBefore.Text = template.BeforeEach;
@@ -64,9 +74,9 @@ namespace RowJoin.Views
 
     public class JoinTemplate
     {
-        public JoinTemplate(int index, string header, string beforeEach, string betweenEach, string afterEach, string footer)
+        public JoinTemplate(string name,  string header, string beforeEach, string betweenEach, string afterEach, string footer)
         {
-            Index = index;
+            Name = name;
             Header = header;
             BeforeEach = beforeEach;
             BetweenEach = betweenEach;
@@ -74,7 +84,8 @@ namespace RowJoin.Views
             Footer = footer;
         }
 
-        public int Index { get; private set; }
+        public int Index { get; set; }
+        public string Name { get; private set; }
         public string Header { get; private set; }
         public string BeforeEach { get; private set; }
         public string BetweenEach { get; private set; }

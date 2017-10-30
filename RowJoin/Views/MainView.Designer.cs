@@ -100,18 +100,14 @@
             // 
             // CbxTemplate
             // 
-            this.CbxTemplate.EditValue = "Select * From $TABLE$ where $COLUMN$ like \'%...%\' or ...";
             this.CbxTemplate.Location = new System.Drawing.Point(83, 12);
             this.CbxTemplate.Name = "CbxTemplate";
             this.CbxTemplate.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.CbxTemplate.Properties.Items.AddRange(new object[] {
-            "Select * From $TABLE$ where $COLUMN$ like \'%...%\' or ...",
-            "(\'...\', ...)"});
             this.CbxTemplate.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
             this.CbxTemplate.Size = new System.Drawing.Size(799, 20);
             this.CbxTemplate.StyleController = this.layoutControl1;
-            this.CbxTemplate.TabIndex = 11;
+            this.CbxTemplate.TabIndex = 3;
             this.CbxTemplate.SelectedIndexChanged += new System.EventHandler(this.comboBoxEdit1_SelectedIndexChanged);
             // 
             // TxtOutput
@@ -138,7 +134,7 @@
             // 
             // TxtFooter
             // 
-            this.TxtFooter.EditValue = ")";
+            this.TxtFooter.EditValue = "";
             this.TxtFooter.Location = new System.Drawing.Point(83, 132);
             this.TxtFooter.Name = "TxtFooter";
             this.TxtFooter.Properties.Appearance.Font = new System.Drawing.Font("Courier New", 8.25F);
@@ -150,7 +146,7 @@
             // 
             // TxtAfter
             // 
-            this.TxtAfter.EditValue = "\'";
+            this.TxtAfter.EditValue = "";
             this.TxtAfter.Location = new System.Drawing.Point(83, 108);
             this.TxtAfter.Name = "TxtAfter";
             this.TxtAfter.Properties.Appearance.Font = new System.Drawing.Font("Courier New", 8.25F);
@@ -162,7 +158,7 @@
             // 
             // TxtBetween
             // 
-            this.TxtBetween.EditValue = ", ";
+            this.TxtBetween.EditValue = "";
             this.TxtBetween.Location = new System.Drawing.Point(83, 84);
             this.TxtBetween.Name = "TxtBetween";
             this.TxtBetween.Properties.Appearance.Font = new System.Drawing.Font("Courier New", 8.25F);
@@ -174,7 +170,7 @@
             // 
             // TxtBefore
             // 
-            this.TxtBefore.EditValue = "\'";
+            this.TxtBefore.EditValue = "";
             this.TxtBefore.Location = new System.Drawing.Point(83, 60);
             this.TxtBefore.Name = "TxtBefore";
             this.TxtBefore.Properties.Appearance.Font = new System.Drawing.Font("Courier New", 8.25F);
@@ -186,7 +182,7 @@
             // 
             // TxtHeader
             // 
-            this.TxtHeader.EditValue = "(";
+            this.TxtHeader.EditValue = "";
             this.TxtHeader.Location = new System.Drawing.Point(83, 36);
             this.TxtHeader.Name = "TxtHeader";
             this.TxtHeader.Properties.Appearance.Font = new System.Drawing.Font("Courier New", 8.25F);
